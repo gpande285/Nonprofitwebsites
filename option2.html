@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hope for Tomorrow | NGO</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Hope<span class="highlight">Tomorrow</span></h1>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#donate">Donate</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="mobile-menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Building a Brighter Future Together</h1>
+      <p>We empower communities through education, health, and sustainable development.</p>
+      <a href="#donate" class="btn-primary">Donate Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p><strong>Hope for Tomorrow</strong> is a non-profit organization founded in 2015, dedicated to creating lasting change in underserved communities.</p>
+          <p>We believe every child deserves education, every family deserves healthcare, and every community deserves opportunity.</p>
+          <ul>
+            <li>📚 Educated <strong>5,000+</strong> children</li>
+            <li>🏥 Provided healthcare to <strong>12,000+</strong> people</li>
+            <li>🌱 Planted <strong>50,000+</strong> trees</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1593113598332-cd25a5f32a14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Children learning">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="section bg-light">
+    <div class="container">
+      <h2>Our Programs</h2>
+      <div class="programs-grid">
+        <div class="program-card">
+          <h3>🎓 Education for All</h3>
+          <p>Free schooling, scholarships, and learning materials for underprivileged children.</p>
+        </div>
+        <div class="program-card">
+          <h3>🏥 Health & Wellness</h3>
+          <p>Mobile clinics, vaccinations, and maternal care in remote areas.</p>
+        </div>
+        <div class="program-card">
+          <h3>🌍 Sustainable Livelihood</h3>
+          <p>Vocational training, micro-loans, and eco-friendly farming initiatives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate -->
+  <section id="donate" class="section">
+    <div class="container">
+      <h2>Make a Difference Today</h2>
+      <p>Your donation changes lives. 100% of funds go directly to programs.</p>
+      <div class="donate-options">
+        <a href="https://paypal.com" target="_blank" class="btn-donate">$10</a>
+        <a href="https://paypal.com" target="_blank" class="btn-donate">$25</a>
+        <a href="https://paypal.com" target="_blank" class="btn-donate">$50</a>
+        <a href="https://paypal.com" target="_blank" class="btn-donate custom">Custom</a>
+      </div>
+      <p class="small">Or <a href="mailto:donate@hopefortomorrow.org">contact us</a> for bank transfer / crypto donations.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>📧 <a href="mailto:info@hopefortomorrow.org">info@hopefortomorrow.org</a></p>
+          <p>📞 +1 (555) 123-4567</p>
+          <p>📍 123 Hope Street, Impact City, IC 90210</p>
+        </div>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Hope for Tomorrow. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

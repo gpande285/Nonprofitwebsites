@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Website</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <header><!-- Navigation -->
+   <nav id="nav" class="fixed w-full top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between items-center h-16">
+      <div class="flex items-center"><span id="org-name" class="text-2xl font-bold">Hope Foundation</span>
+      </div>
+      <div class="hidden md:flex space-x-8"><a href="#mission" class="hover:opacity-80 transition-opacity">Mission</a> <a href="#work" class="hover:opacity-80 transition-opacity">Our Work</a> <a href="#impact" class="hover:opacity-80 transition-opacity">Impact</a> <a href="#programs" class="hover:opacity-80 transition-opacity">Programs</a> <a href="#contact" class="hover:opacity-80 transition-opacity">Contact</a>
+      </div>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="hero" class="hero-gradient pt-24 pb-20 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+     <p id="tagline" class="text-xl mb-6 opacity-90">Making a difference, one life at a time</p>
+     <h1 id="hero-title" class="text-5xl md:text-6xl font-bold mb-6">Empowering Communities Through Action</h1>
+     <p id="hero-subtitle" class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">Join us in creating lasting change and building a brighter future for those in need</p><button id="cta-button" class="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">Get Involved Today</button>
+    </div>
+   </section>
+  </header>
+  <main><!-- Image Carousel Section -->
+   <section id="carousel" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="relative overflow-hidden rounded-3xl shadow-2xl" style="height: 500px;"><!-- Carousel Images -->
+      <div class="carousel-slide absolute w-full h-full transition-opacity duration-700" style="opacity: 1;">
+       <svg viewbox="0 0 1200 500" class="w-full h-full"><defs>
+         <lineargradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+         </lineargradient>
+        </defs> <rect width="1200" height="500" fill="url(#grad1)" /> <text x="600" y="200" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+         🌍 Global Impact
+        </text> <text x="600" y="280" font-size="24" fill="white" text-anchor="middle">
+         Reaching communities across 50+ countries
+        </text> <circle cx="300" cy="350" r="40" fill="white" opacity="0.3" /> <circle cx="600" cy="380" r="50" fill="white" opacity="0.3" /> <circle cx="900" cy="340" r="45" fill="white" opacity="0.3" />
+       </svg>
+      </div>
+      <div class="carousel-slide absolute w-full h-full transition-opacity duration-700" style="opacity: 0;">
+       <svg viewbox="0 0 1200 500" class="w-full h-full"><defs>
+         <lineargradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+         </lineargradient>
+        </defs> <rect width="1200" height="500" fill="url(#grad2)" /> <text x="600" y="200" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+         👥 Community Building
+        </text> <text x="600" y="280" font-size="24" fill="white" text-anchor="middle">
+         Empowering local leaders and volunteers
+        </text> <rect x="200" y="320" width="80" height="80" fill="white" opacity="0.3" rx="10" /> <rect x="560" y="320" width="80" height="80" fill="white" opacity="0.3" rx="10" /> <rect x="920" y="320" width="80" height="80" fill="white" opacity="0.3" rx="10" />
+       </svg>
+      </div>
+      <div class="carousel-slide absolute w-full h-full transition-opacity duration-700" style="opacity: 0;">
+       <svg viewbox="0 0 1200 500" class="w-full h-full"><defs>
+         <lineargradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+         </lineargradient>
+        </defs> <rect width="1200" height="500" fill="url(#grad3)" /> <text x="600" y="200" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+         🎯 Sustainable Solutions
+        </text> <text x="600" y="280" font-size="24" fill="white" text-anchor="middle">
+         Creating lasting change for future generations
+        </text> <polygon points="600,320 650,380 600,440 550,380" fill="white" opacity="0.3" /> <polygon points="350,350 400,410 350,470 300,410" fill="white" opacity="0.3" /> <polygon points="850,350 900,410 850,470 800,410" fill="white" opacity="0.3" />
+       </svg>
+      </div><!-- Navigation Dots -->
+      <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10"><button class="carousel-dot w-3 h-3 rounded-full bg-white transition-all duration-300" data-slide="0"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 transition-all duration-300" data-slide="1"></button> <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 transition-all duration-300" data-slide="2"></button>
+      </div><!-- Navigation Arrows --> <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center text-white text-2xl font-bold z-10">‹</button> <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center text-white text-2xl font-bold z-10">›</button>
+     </div>
+    </div>
+   </section><!-- Mission Section -->
+   <section id="mission" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="max-w-4xl mx-auto text-center">
+      <h2 id="mission-title" class="text-4xl md:text-5xl font-bold mb-8">Our Mission</h2>
+      <p id="mission-text" class="text-xl leading-relaxed">We are dedicated to improving lives through sustainable development, education, and community empowerment. Our work focuses on creating opportunities for underserved communities to thrive and reach their full potential.</p>
+     </div>
+    </div>
+   </section><!-- Impact Statistics -->
+   <section id="impact" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="stat-card text-center p-8 rounded-2xl">
+       <div id="stat1-number" class="text-5xl md:text-6xl font-bold mb-4">
+        10,000+
+       </div>
+       <div id="stat1-label" class="text-xl">
+        Lives Impacted
+       </div>
+      </div>
+      <div class="stat-card text-center p-8 rounded-2xl">
+       <div id="stat2-number" class="text-5xl md:text-6xl font-bold mb-4">
+        50+
+       </div>
+       <div id="stat2-label" class="text-xl">
+        Communities Served
+       </div>
+      </div>
+      <div class="stat-card text-center p-8 rounded-2xl">
+       <div id="stat3-number" class="text-5xl md:text-6xl font-bold mb-4">
+        25
+       </div>
+       <div id="stat3-label" class="text-xl">
+        Years of Service
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Work Done Section -->
+   <section id="work" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <h2 id="work-title" class="text-4xl md:text-5xl font-bold text-center mb-16">Our Work in Action</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-12"><!-- Project 1 -->
+      <div class="work-card rounded-2xl overflow-hidden shadow-xl">
+       <div class="grid grid-cols-2 gap-2 p-6">
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">BEFORE</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><rect width="300" height="200" fill="#e0e0e0" /> <text x="150" y="100" font-size="16" fill="#666" text-anchor="middle">
+           📚
+          </text> <text x="150" y="130" font-size="12" fill="#666" text-anchor="middle">
+           Limited Resources
+          </text>
+         </svg>
+        </div>
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">AFTER</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><defs>
+           <lineargradient id="workGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+           </lineargradient>
+          </defs> <rect width="300" height="200" fill="url(#workGrad1)" /> <text x="150" y="100" font-size="24" fill="white" text-anchor="middle">
+           📚✨
+          </text> <text x="150" y="130" font-size="12" fill="white" text-anchor="middle">
+           Fully Equipped Library
+          </text>
+         </svg>
+        </div>
+       </div>
+       <div class="px-6 pb-6">
+        <h3 id="work1-title" class="text-2xl font-bold mb-3">School Library Project</h3>
+        <p id="work1-desc" class="leading-relaxed">Transformed an empty room into a vibrant library with 5,000+ books, serving 800 students daily.</p>
+       </div>
+      </div><!-- Project 2 -->
+      <div class="work-card rounded-2xl overflow-hidden shadow-xl">
+       <div class="grid grid-cols-2 gap-2 p-6">
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">BEFORE</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><rect width="300" height="200" fill="#e0e0e0" /> <text x="150" y="100" font-size="16" fill="#666" text-anchor="middle">
+           💧
+          </text> <text x="150" y="130" font-size="12" fill="#666" text-anchor="middle">
+           No Clean Water
+          </text>
+         </svg>
+        </div>
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">AFTER</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><defs>
+           <lineargradient id="workGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+           </lineargradient>
+          </defs> <rect width="300" height="200" fill="url(#workGrad2)" /> <text x="150" y="100" font-size="24" fill="white" text-anchor="middle">
+           💧✨
+          </text> <text x="150" y="130" font-size="12" fill="white" text-anchor="middle">
+           Clean Water Access
+          </text>
+         </svg>
+        </div>
+       </div>
+       <div class="px-6 pb-6">
+        <h3 id="work2-title" class="text-2xl font-bold mb-3">Clean Water Initiative</h3>
+        <p id="work2-desc" class="leading-relaxed">Built 15 water wells providing clean drinking water to 3,000+ families in rural communities.</p>
+       </div>
+      </div><!-- Project 3 -->
+      <div class="work-card rounded-2xl overflow-hidden shadow-xl">
+       <div class="grid grid-cols-2 gap-2 p-6">
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">BEFORE</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><rect width="300" height="200" fill="#e0e0e0" /> <text x="150" y="100" font-size="16" fill="#666" text-anchor="middle">
+           🏥
+          </text> <text x="150" y="130" font-size="12" fill="#666" text-anchor="middle">
+           No Medical Facility
+          </text>
+         </svg>
+        </div>
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">AFTER</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><defs>
+           <lineargradient id="workGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+           </lineargradient>
+          </defs> <rect width="300" height="200" fill="url(#workGrad3)" /> <text x="150" y="100" font-size="24" fill="white" text-anchor="middle">
+           🏥✨
+          </text> <text x="150" y="130" font-size="12" fill="white" text-anchor="middle">
+           Health Center
+          </text>
+         </svg>
+        </div>
+       </div>
+       <div class="px-6 pb-6">
+        <h3 id="work3-title" class="text-2xl font-bold mb-3">Healthcare Center</h3>
+        <p id="work3-desc" class="leading-relaxed">Established a fully-equipped clinic providing free healthcare to 500+ patients monthly.</p>
+       </div>
+      </div><!-- Project 4 -->
+      <div class="work-card rounded-2xl overflow-hidden shadow-xl">
+       <div class="grid grid-cols-2 gap-2 p-6">
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">BEFORE</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><rect width="300" height="200" fill="#e0e0e0" /> <text x="150" y="100" font-size="16" fill="#666" text-anchor="middle">
+           💼
+          </text> <text x="150" y="130" font-size="12" fill="#666" text-anchor="middle">
+           Unemployment
+          </text>
+         </svg>
+        </div>
+        <div>
+         <p class="text-sm font-semibold mb-2 opacity-70">AFTER</p>
+         <svg viewbox="0 0 300 200" class="w-full rounded-lg"><defs>
+           <lineargradient id="workGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+           </lineargradient>
+          </defs> <rect width="300" height="200" fill="url(#workGrad4)" /> <text x="150" y="100" font-size="24" fill="white" text-anchor="middle">
+           💼✨
+          </text> <text x="150" y="130" font-size="12" fill="white" text-anchor="middle">
+           Skills Training
+          </text>
+         </svg>
+        </div>
+       </div>
+       <div class="px-6 pb-6">
+        <h3 id="work4-title" class="text-2xl font-bold mb-3">Vocational Training</h3>
+        <p id="work4-desc" class="leading-relaxed">Trained 1,200+ individuals in marketable skills, with 85% employment rate within 6 months.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Programs Section -->
+   <section id="programs" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <h2 id="programs-title" class="text-4xl md:text-5xl font-bold text-center mb-16">Our Programs</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8"><!-- Program 1 -->
+      <div class="card-hover rounded-2xl p-8 shadow-lg">
+       <div class="text-5xl mb-6">
+        📚
+       </div>
+       <h3 id="program1-title" class="text-2xl font-bold mb-4">Education Initiative</h3>
+       <p id="program1-desc" class="text-lg leading-relaxed">Providing quality education and learning resources to children in underserved communities, ensuring every child has access to knowledge.</p>
+      </div><!-- Program 2 -->
+      <div class="card-hover rounded-2xl p-8 shadow-lg">
+       <div class="text-5xl mb-6">
+        🏥
+       </div>
+       <h3 id="program2-title" class="text-2xl font-bold mb-4">Healthcare Access</h3>
+       <p id="program2-desc" class="text-lg leading-relaxed">Delivering essential healthcare services and medical support to remote areas, improving health outcomes for thousands.</p>
+      </div><!-- Program 3 -->
+      <div class="card-hover rounded-2xl p-8 shadow-lg">
+       <div class="text-5xl mb-6">
+        💼
+       </div>
+       <h3 id="program3-title" class="text-2xl font-bold mb-4">Skills Development</h3>
+       <p id="program3-desc" class="text-lg leading-relaxed">Empowering individuals with vocational training and job skills to create sustainable livelihoods and economic independence.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+     <h2 class="text-4xl md:text-5xl font-bold mb-8">Join Our Mission</h2>
+     <p class="text-xl mb-10 leading-relaxed">Together, we can create meaningful change. Whether through volunteering, donations, or partnerships, your support makes a real difference.</p>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center"><button class="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">Donate Now</button> <button class="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg">Volunteer</button>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="py-12 px-4">
+   <div class="max-w-7xl mx-auto text-center">
+    <p id="footer-text" class="text-lg">© 2024 Hope Foundation. All rights reserved. | contact@hopefoundation.org</p>
+   </div>
+  </footer>
+  <script>
+    const defaultConfig = {
+      background_color: "#f8f9fa",
+      surface_color: "#ffffff",
+      text_color: "#1a202c",
+      primary_action_color: "#667eea",
+      secondary_action_color: "#764ba2",
+      font_family: "Inter",
+      font_size: 16,
+      organization_name: "Hope Foundation",
+      tagline: "Making a difference, one life at a time",
+      hero_title: "Empowering Communities Through Action",
+      hero_subtitle: "Join us in creating lasting change and building a brighter future for those in need",
+      cta_button: "Get Involved Today",
+      mission_title: "Our Mission",
+      mission_text: "We are dedicated to improving lives through sustainable development, education, and community empowerment. Our work focuses on creating opportunities for underserved communities to thrive and reach their full potential.",
+      stat1_number: "10,000+",
+      stat1_label: "Lives Impacted",
+      stat2_number: "50+",
+      stat2_label: "Communities Served",
+      stat3_number: "25",
+      stat3_label: "Years of Service",
+      programs_title: "Our Programs",
+      program1_title: "Education Initiative",
+      program1_desc: "Providing quality education and learning resources to children in underserved communities, ensuring every child has access to knowledge.",
+      program2_title: "Healthcare Access",
+      program2_desc: "Delivering essential healthcare services and medical support to remote areas, improving health outcomes for thousands.",
+      program3_title: "Skills Development",
+      program3_desc: "Empowering individuals with vocational training and job skills to create sustainable livelihoods and economic independence.",
+      work_title: "Our Work in Action",
+      work1_title: "School Library Project",
+      work1_desc: "Transformed an empty room into a vibrant library with 5,000+ books, serving 800 students daily.",
+      work2_title: "Clean Water Initiative",
+      work2_desc: "Built 15 water wells providing clean drinking water to 3,000+ families in rural communities.",
+      work3_title: "Healthcare Center",
+      work3_desc: "Established a fully-equipped clinic providing free healthcare to 500+ patients monthly.",
+      work4_title: "Vocational Training",
+      work4_desc: "Trained 1,200+ individuals in marketable skills, with 85% employment rate within 6 months.",
+      footer_text: "© 2024 Hope Foundation. All rights reserved. | contact@hopefoundation.org"
+    };
+
+    async function onConfigChange(config) {
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const baseFontSize = config.font_size || defaultConfig.font_size;
+
+      // Apply colors
+      document.body.style.backgroundColor = backgroundColor;
+      document.body.style.color = textColor;
+      
+      const nav = document.getElementById('nav');
+      nav.style.backgroundColor = primaryActionColor;
+      nav.style.color = '#ffffff';
+      
+      const orgName = document.getElementById('org-name');
+      orgName.style.color = '#ffffff';
+      
+      const navLinks = nav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.style.color = '#ffffff';
+      });
+
+      const hero = document.getElementById('hero');
+      hero.style.background = `linear-gradient(135deg, ${primaryActionColor} 0%, ${secondaryActionColor} 100%)`;
+      hero.style.color = '#ffffff';
+
+      const ctaButton = document.getElementById('cta-button');
+      ctaButton.style.backgroundColor = '#ffffff';
+      ctaButton.style.color = primaryActionColor;
+
+      const missionSection = document.getElementById('mission');
+      missionSection.style.backgroundColor = surfaceColor;
+      missionSection.style.color = textColor;
+
+      const impactSection = document.getElementById('impact');
+      impactSection.style.backgroundColor = backgroundColor;
+      
+      const statCards = impactSection.querySelectorAll('.stat-card');
+      statCards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+        card.style.color = primaryActionColor;
+      });
+
+      const workSection = document.getElementById('work');
+      workSection.style.backgroundColor = backgroundColor;
+      workSection.style.color = textColor;
+
+      const workCards = workSection.querySelectorAll('.work-card');
+      workCards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+        card.style.color = textColor;
+      });
+
+      const programsSection = document.getElementById('programs');
+      programsSection.style.backgroundColor = surfaceColor;
+      programsSection.style.color = textColor;
+
+      const programCards = programsSection.querySelectorAll('.card-hover');
+      programCards.forEach(card => {
+        card.style.backgroundColor = backgroundColor;
+        card.style.color = textColor;
+      });
+
+      const contactSection = document.getElementById('contact');
+      contactSection.style.backgroundColor = backgroundColor;
+      contactSection.style.color = textColor;
+
+      const contactButtons = contactSection.querySelectorAll('button');
+      contactButtons.forEach((button, index) => {
+        if (index === 0) {
+          button.style.backgroundColor = primaryActionColor;
+          button.style.color = '#ffffff';
+        } else {
+          button.style.backgroundColor = surfaceColor;
+          button.style.color = primaryActionColor;
+          button.style.border = `2px solid ${primaryActionColor}`;
+        }
+      });
+
+      const footer = document.querySelector('footer');
+      footer.style.backgroundColor = surfaceColor;
+      footer.style.color = textColor;
+
+      // Apply fonts
+      const fontStack = `${fontFamily}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif`;
+      document.body.style.fontFamily = fontStack;
+
+      // Apply font sizes
+      document.getElementById('org-name').style.fontSize = `${baseFontSize * 1.5}px`;
+      document.getElementById('tagline').style.fontSize = `${baseFontSize * 1.25}px`;
+      document.getElementById('hero-title').style.fontSize = `${baseFontSize * 3.5}px`;
+      document.getElementById('hero-subtitle').style.fontSize = `${baseFontSize * 1.5}px`;
+      document.getElementById('cta-button').style.fontSize = `${baseFontSize * 1.125}px`;
+      document.getElementById('mission-title').style.fontSize = `${baseFontSize * 3}px`;
+      document.getElementById('mission-text').style.fontSize = `${baseFontSize * 1.25}px`;
+      document.querySelectorAll('.stat-card > div:first-child').forEach(el => {
+        el.style.fontSize = `${baseFontSize * 3.75}px`;
+      });
+      document.querySelectorAll('.stat-card > div:last-child').forEach(el => {
+        el.style.fontSize = `${baseFontSize * 1.25}px`;
+      });
+      document.getElementById('work-title').style.fontSize = `${baseFontSize * 3}px`;
+      document.querySelectorAll('.work-card h3').forEach(el => {
+        el.style.fontSize = `${baseFontSize * 1.5}px`;
+      });
+      document.querySelectorAll('.work-card p').forEach(el => {
+        el.style.fontSize = `${baseFontSize * 1}px`;
+      });
+      document.getElementById('programs-title').style.fontSize = `${baseFontSize * 3}px`;
+      document.querySelectorAll('.card-hover h3').forEach(el => {
+        el.style.fontSize = `${baseFontSize * 1.5}px`;
+      });
+      document.querySelectorAll('.card-hover p').forEach(el => {
+        el.style.fontSize = `${baseFontSize * 1.125}px`;
+      });
+      document.querySelector('#contact h2').style.fontSize = `${baseFontSize * 3}px`;
+      document.querySelector('#contact > div > p').style.fontSize = `${baseFontSize * 1.25}px`;
+      contactButtons.forEach(button => {
+        button.style.fontSize = `${baseFontSize * 1.125}px`;
+      });
+      document.getElementById('footer-text').style.fontSize = `${baseFontSize * 1.125}px`;
+
+      // Apply text content
+      document.getElementById('org-name').textContent = config.organization_name || defaultConfig.organization_name;
+      document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('mission-title').textContent = config.mission_title || defaultConfig.mission_title;
+      document.getElementById('mission-text').textContent = config.mission_text || defaultConfig.mission_text;
+      document.getElementById('stat1-number').textContent = config.stat1_number || defaultConfig.stat1_number;
+      document.getElementById('stat1-label').textContent = config.stat1_label || defaultConfig.stat1_label;
+      document.getElementById('stat2-number').textContent = config.stat2_number || defaultConfig.stat2_number;
+      document.getElementById('stat2-label').textContent = config.stat2_label || defaultConfig.stat2_label;
+      document.getElementById('stat3-number').textContent = config.stat3_number || defaultConfig.stat3_number;
+      document.getElementById('stat3-label').textContent = config.stat3_label || defaultConfig.stat3_label;
+      document.getElementById('programs-title').textContent = config.programs_title || defaultConfig.programs_title;
+      document.getElementById('program1-title').textContent = config.program1_title || defaultConfig.program1_title;
+      document.getElementById('program1-desc').textContent = config.program1_desc || defaultConfig.program1_desc;
+      document.getElementById('program2-title').textContent = config.program2_title || defaultConfig.program2_title;
+      document.getElementById('program2-desc').textContent = config.program2_desc || defaultConfig.program2_desc;
+      document.getElementById('program3-title').textContent = config.program3_title || defaultConfig.program3_title;
+      document.getElementById('program3-desc').textContent = config.program3_desc || defaultConfig.program3_desc;
+      document.getElementById('work-title').textContent = config.work_title || defaultConfig.work_title;
+      document.getElementById('work1-title').textContent = config.work1_title || defaultConfig.work1_title;
+      document.getElementById('work1-desc').textContent = config.work1_desc || defaultConfig.work1_desc;
+      document.getElementById('work2-title').textContent = config.work2_title || defaultConfig.work2_title;
+      document.getElementById('work2-desc').textContent = config.work2_desc || defaultConfig.work2_desc;
+      document.getElementById('work3-title').textContent = config.work3_title || defaultConfig.work3_title;
+      document.getElementById('work3-desc').textContent = config.work3_desc || defaultConfig.work3_desc;
+      document.getElementById('work4-title').textContent = config.work4_title || defaultConfig.work4_title;
+      document.getElementById('work4-desc').textContent = config.work4_desc || defaultConfig.work4_desc;
+      document.getElementById('footer-text').textContent = config.footer_text || defaultConfig.footer_text;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["organization_name", config.organization_name || defaultConfig.organization_name],
+        ["tagline", config.tagline || defaultConfig.tagline],
+        ["hero_title", config.hero_title || defaultConfig.hero_title],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["cta_button", config.cta_button || defaultConfig.cta_button],
+        ["mission_title", config.mission_title || defaultConfig.mission_title],
+        ["mission_text", config.mission_text || defaultConfig.mission_text],
+        ["stat1_number", config.stat1_number || defaultConfig.stat1_number],
+        ["stat1_label", config.stat1_label || defaultConfig.stat1_label],
+        ["stat2_number", config.stat2_number || defaultConfig.stat2_number],
+        ["stat2_label", config.stat2_label || defaultConfig.stat2_label],
+        ["stat3_number", config.stat3_number || defaultConfig.stat3_number],
+        ["stat3_label", config.stat3_label || defaultConfig.stat3_label],
+        ["programs_title", config.programs_title || defaultConfig.programs_title],
+        ["program1_title", config.program1_title || defaultConfig.program1_title],
+        ["program1_desc", config.program1_desc || defaultConfig.program1_desc],
+        ["program2_title", config.program2_title || defaultConfig.program2_title],
+        ["program2_desc", config.program2_desc || defaultConfig.program2_desc],
+        ["program3_title", config.program3_title || defaultConfig.program3_title],
+        ["program3_desc", config.program3_desc || defaultConfig.program3_desc],
+        ["work_title", config.work_title || defaultConfig.work_title],
+        ["work1_title", config.work1_title || defaultConfig.work1_title],
+        ["work1_desc", config.work1_desc || defaultConfig.work1_desc],
+        ["work2_title", config.work2_title || defaultConfig.work2_title],
+        ["work2_desc", config.work2_desc || defaultConfig.work2_desc],
+        ["work3_title", config.work3_title || defaultConfig.work3_title],
+        ["work3_desc", config.work3_desc || defaultConfig.work3_desc],
+        ["work4_title", config.work4_title || defaultConfig.work4_title],
+        ["work4_desc", config.work4_desc || defaultConfig.work4_desc],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('nav');
+      const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      
+      if (window.scrollY > 50) {
+        nav.style.backgroundColor = primaryActionColor;
+        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+      } else {
+        nav.style.backgroundColor = primaryActionColor;
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+      });
+      dots.forEach((dot, i) => {
+        dot.style.opacity = i === index ? '1' : '0.5';
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    // Auto-advance carousel
+    let carouselInterval = setInterval(nextSlide, 5000);
+
+    // Navigation buttons
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+      clearInterval(carouselInterval);
+      nextSlide();
+      carouselInterval = setInterval(nextSlide, 5000);
+    });
+
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+      clearInterval(carouselInterval);
+      prevSlide();
+      carouselInterval = setInterval(nextSlide, 5000);
+    });
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        clearInterval(carouselInterval);
+        showSlide(index);
+        carouselInterval = setInterval(nextSlide, 5000);
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99c1cf0ce03731be',t:'MTc2MjczODQ4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
